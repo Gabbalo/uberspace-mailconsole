@@ -100,6 +100,11 @@ else {	# show form to create mailbox
 					<th colspan="2"><?php echo $text_set_name; ?></th>
 				<tr>
 					<td class="form_left"><?php echo $text_mailbox; ?>*:</td>
+					<td class="form_left">
+						<a href="#" class="tooltip"><?php echo $text_mailbox; ?>
+							<span><img class="callout" src="callout.png" /><?php echo $text_tooltip_mailbox1.": ".$max_mailboxname_length." ".$text_tooltip_chars."<br /><br />".$text_tooltip_mailbox2.": a-z, A-Z, 0-9 ".$text_tooltip_and." .-_+<br /><br />".$text_tooltip_mailbox3."<br /><br />".$text_tooltip_mailbox4."<br /><br />email-default@".$GLOBALS['domain']." --> <br /><br />email-maxmustermann@".$GLOBALS['domain']."  &<br />email-jondoe@".$GLOBALS['domain'];?></span>
+						</a>
+					</td>
 					<td class="form_right">
 						<input type="text" maxlength="20" id="mailbox" name="mailbox" style="width: 60%" class="noBorder">@<?php echo $domain; ?>
 					</td>
@@ -108,7 +113,11 @@ else {	# show form to create mailbox
 					<td colspan ="2" align="center">- <?php echo $text_or_in_caps; ?> -</td>
 				</tr>
 				<tr>
-					<td class="form_left"><?php echo $text_random_address; ?></td>
+					<td class="form_left">
+						<a href="#" class="tooltip"><?php echo $text_random_address; ?>
+							<span><img class="callout" src="callout.png" /><?php echo $text_tooltip_random1.":<br /><br /> 'trash-".$text_tooltip_random2."@".$GLOBALS['domain']."'<br /><br />".$text_tooltip_random3;?></span>
+						</a>
+					</td>
 					<td class="form_right">
 						<input type="checkbox" name="random" value="dorandom"> <?php echo $text_replace_prior_field; ?>
 					</td>
@@ -117,7 +126,11 @@ else {	# show form to create mailbox
 					<th colspan ="2" align="center"><?php echo $text_parameters; ?></th>
 				</tr>
 				<tr>
-					<td class="form_left"><?php echo $text_recipient; ?>:</td>
+					<td class="form_left">
+						<a href="#" class="tooltip"><?php echo $text_recipient; ?>
+							<span><img class="callout" src="callout.png" /><?php echo $text_tooltip_recipient;?></span>
+						</a>
+					</td>
 					<td class="form_right">
 						<select name="destination" style="width: 300px"  class="noBorder">
 						<option value="<?php echo $address1; ?>"><?php echo $name1; ?></option>
@@ -126,7 +139,11 @@ else {	# show form to create mailbox
 					</td>
 				</tr>
 				<tr>
-					<td class="form_left"><?php echo $text_time_to_live; ?>:</td>
+					<td class="form_left">
+						<a href="#" class="tooltip"><?php echo $text_time_to_live; ?>
+							<span><img class="callout" src="callout.png" /><?php echo $text_tooltip_ttl;?></span>
+						</a>
+					</td>
 					<td class="form_right">
 						<select name="ttl" style="width: 300px" class="noBorder">
 							<option value="1"><?php echo $GLOBALS["text_one_hour"]; ?></option>
@@ -141,7 +158,11 @@ else {	# show form to create mailbox
 					</td>
 				</tr>
 				<tr>
-					<td class="form_left"><?php echo $text_comment; ?>:</td>
+					<td class="form_left">
+						<a href="#" class="tooltip"><?php echo $text_comment; ?>
+							<span><img class="callout" src="callout.png" /><?php echo $text_tooltip_comment;?></span>
+						</a>
+					</td>
 					<td class="form_right"><input type="text" maxlength="99" id="comment" name="comment" style="width: 100%" class="noBorder"></td>
 				</tr>
 				<tr>
@@ -150,7 +171,7 @@ else {	# show form to create mailbox
 					</td>
 				</tr>
 			</table>
-			<p><h6><?php echo "* ".$text_mailbox_restrictions; ?></h6>
+			<p><h6><?php echo "* ".$text_tooltip; ?></h6>
 		</form>
 	</div>
 <?php } ?>
@@ -158,7 +179,7 @@ else {	# show form to create mailbox
 	<?php list_mailbox($db_array) ?>
 </div>
 <div class="licence">
-	<a href="http://uberspace.de">Uberspace</a> mail-console von <a href="http://loh.re">Gabriel Lohre</a></br><a class="credittext"><a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0">Licensed under GNU GPL v2.0</a>
+	<a href="http://uberspace.de">Uberspace</a> mail-console von <a href="http://loh.re">Gabriel Lohre</a><br /><a class="credittext"><a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0">Licensed under GNU GPL v2.0</a>
 </div>
 </body>
 </html>
