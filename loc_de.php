@@ -10,7 +10,6 @@ $text_random_address = "Zufällige Adresse";
 $text_replace_prior_field = "überschreibt vorheriges Feld!";
 $text_parameters = "Parameter";
 $text_recipient = "Ziel-Adresse";
-$text_time_to_live = "Laufzeit";
 $text_expiration = "Gültig bis";
 $text_infinite = "Unbegrenzt";
 $text_one_hour = "Eine Stunde";
