@@ -30,9 +30,9 @@ function planned_delete ($db_array,$path){ # used to cleanup outdated mailboxes
 			delete_mailbox($db_array,$boxname,$path);
 			$to=$row["destination"];
 			sent_status_mail($to);
-			#echo "Die Mailbox ".$row["boxname"]." wurde gelöscht!</br>";
+			#echo "Die Mailbox ".$row["boxname"]." wurde gelöscht!<br \>";
 		}
-		else { #echo "for debug purposes</br>"; 
+		else { #echo "for debug purposes<br \>"; 
 		}
 	}
 	mysqli_close ($dbhandler);
