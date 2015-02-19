@@ -2,8 +2,6 @@
 # Lokalisierung für de
 
 $text_site_title = "Trashmailer für Uberspace";
-$text_header = "Trashmail";
-$text_subheader = "Administrations Konsole";
 
 $text_set_name = "Name festlegen";
 $text_mailbox = "Mailbox-Name";
@@ -13,6 +11,8 @@ $text_replace_prior_field = "überschreibt vorheriges Feld!";
 $text_parameters = "Parameter";
 $text_recipient = "Ziel-Adresse";
 $text_time_to_live = "Laufzeit";
+$text_expiration = "Gültig bis";
+$text_infinite = "Unbegrenzt";
 $text_one_hour = "Eine Stunde";
 $text_two_hours = "Zwei Stunden";
 $text_twelve_hours = "Zwölf Stunden";
@@ -25,7 +25,20 @@ $text_comment = "Kommentar";
 $text_reset_button = "Zurücksetzen";
 $text_submit_button = "Absenden";
 $text_creation_date = "Erstelldatum";
-$text_mailbox_restrictions = "maximal ".$max_mailboxname_length." Zeichen, a-z, A-Z, 0-9, Bindestrich, Unterstrich und Punkt erlaubt";
+
+$text_tooltip="Für die Hilfe bewegen Sie die Maus einfach über die linke Spalte.";
+$text_tooltip_mailbox1="Maximale Zeichenlänge";
+$text_tooltip_chars="Zeichen";
+$text_tooltip_mailbox2="Erlaubte Sonderzeichen";
+$text_tooltip_and="sowie";
+$text_tooltip_mailbox3="Sonderzeichen dürfen nicht am Anfang oder Ende stehen!";
+$text_tooltip_mailbox4="Mit einem angehängten '-default' wird aus der Adresse eine CatchAll-Adresse. Das 'default' kann dann durch beliebige Begriffe bei jeder Verwendung ersetzt werden.";
+$text_tooltip_random1="Erstellt eine zufällige Adresse im Format";
+$text_tooltip_random2="Datum-Zufallszeichenkette";
+$text_tooltip_random3="Eingaben in Feld '".$text_mailbox."' werden ignoriert!";
+$text_tooltip_recipient="Hierhin werden die E-Mails weitergeleitet. Die Auswahl kann in der 'vars.php' angepasst werden.";
+$text_tooltip_ttl="Nach dieser Zeit wird die E-Mail automatisch entfernt. Bei der Auswahl 'Keine Begrenzung' wird die Adresse niemals automatisch entfernt.";
+$text_tooltip_comment="Hier kann zum Beispiel eingetragen werden, wo diese E-Mail-Adresse verwendet wird.";
 
 $text_currently_available_addresses = "Aktuell verfügbare Adressen";
 $text_delete = "Löschen";
