@@ -51,9 +51,9 @@ $defaultprefix="trash";
 # database-server ('localhost')
 $db_server = "localhost"; 		
 # database-name	(begins with your uberspace name, followed by _)
-$db_name = "maildb"; 	
+$db_name = "mailDB"; 	
 # database-user (your uberspace name)
-$db_user = "root"; 
-# database-user-password (get from ~/.my.cnf)
+$db_user = $uberspacename
+# database-user-password (get it from ~/.my.cnf)
 $db_pass = ""; 						
 ?>
