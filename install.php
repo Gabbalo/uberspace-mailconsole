@@ -1,8 +1,13 @@
 ﻿<?php
 include ("vars.php");
-$db_array = array("Server"=>$db_server,'Name'=>$db_name,'User'=>$db_user,'Password'=>$db_pass);
+$dbname = $uberspaceuser."_".$db_name;
+$db_array = array("Server"=>$db_server,'Name'=>$dbname,'User'=>$db_user,'Password'=>$db_pass);
 ### OPEN CONNECTION ###
-$dbhandler = new mysqli($db_array['Server'], $db_array['User'], $db_array['Password'], $db_array['Name']) or die ("Unable to connect to Database-Server!"); # Opens db connection
+$dbhandler = mysqli_connect($db_array['Server'], $db_array['User'], $db_array['Password'], $db_array['Name']);
+if(!$dbhandler)
+{
+  exit("Verbindungsfehler: ".mysqli_connect_error());
+}
 ### CREATE DATABASE ###
 $dbname = $uberspaceuser."_".$db_name;
 $sql = "CREATE DATABASE ".$dbname." COLLATE utf8_unicode_ci";
