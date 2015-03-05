@@ -5,7 +5,7 @@ $db_array = array("Server"=>$db_server,'Name'=>$db_name,'User'=>$db_user,'Passwo
 $dbhandler = new mysqli($db_array['Server'], $db_array['User'], $db_array['Password'], $db_array['Name']) or die ("Unable to connect to Database-Server!"); # Opens db connection
 ### CREATE DATABASE ###
 $dbname = $uberspaceuser."_".$db_name;
-$sql = "CREATE DATABASE ".$dbname." COLLATE utf8_german2_ci";
+$sql = "CREATE DATABASE ".$dbname." COLLATE utf8_unicode_ci";
 if ($dbhandler->query($sql) === TRUE) {
 	echo "Database '".$db_array['Name']."' created successfully<br><br>";
 } 
@@ -18,11 +18,11 @@ else {
 mysqli_select_db ($dbhandler, $dbname);
 $sql="CREATE TABLE ".$dbname.".mailboxlist (
 	id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-	boxname VARCHAR(50) COLLATE utf8_german2_ci NOT NULL, 
-	destination VARCHAR(50) COLLATE utf8_german2_ci NOT NULL, 
+	boxname VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL, 
+	destination VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL, 
 	duration INT(7) NOT NULL, 
 	creationdate TIMESTAMP NOT NULL, 
-	comment VARCHAR(127) COLLATE utf8_german2_ci NOT NULL)";
+	comment VARCHAR(127) COLLATE utf8_unicode_ci NOT NULL)";
 if ($dbhandler->query($sql) === TRUE) {
     echo "Table 'mailboxlist' created successfully<br><br>";
 } else {
