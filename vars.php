@@ -53,7 +53,7 @@ $db_server = "localhost";
 # database-name	(begins with your uberspace name, followed by _)
 $db_name = "mailDB"; 	
 # database-user (your uberspace name)
-$db_user = $uberspacename
+$db_user = $uberspacename;
 # database-user-password (get it from ~/.my.cnf)
 $db_pass = ""; 						
 ?>
