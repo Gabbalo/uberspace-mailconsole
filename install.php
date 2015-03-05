@@ -3,10 +3,10 @@ include ("vars.php");
 $dbname = $uberspaceuser."_".$db_name;
 $db_array = array("Server"=>$db_server,'Name'=>$dbname,'User'=>$db_user,'Password'=>$db_pass);
 ### OPEN CONNECTION ###
-$dbhandler = mysqli_connect($db_array['Server'], $db_array['User'], $db_array['Password'], $db_array['Name']);
-if(!$dbhandler)
-{
-  exit("Verbindungsfehler: ".mysqli_connect_error());
+$dbhandler = new mysqli($db_array['Server'], $db_array['User'], $db_array['Password']); # Opens db connection
+if (mysqli_connect_errno()) {
+  printf("Verbindung zum DB-Server fehlgeschlagen: %s\n", mysqli_connect_error());
+  exit();
 }
 ### CREATE DATABASE ###
 $dbname = $uberspaceuser."_".$db_name;
