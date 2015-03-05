@@ -43,9 +43,8 @@ function random_string($length=10) { # generate random string
 <title><?php echo $text_site_title; ?></title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
-<div>
-<p><h1><?php echo $text_header; ?></h1><p>
-<h2><?php echo $text_subheader; ?></h2><br>&nbsp;<br>
+<div class="header">
+<img class="header" src="header.png"></img>
 </div>
 <?php
 if ( ( isset($_POST["mailbox"]) || isset($_POST["random"] ) ) && isset($_POST["destination"], $_POST["ttl"] ) ){ # check for POST
@@ -98,8 +97,8 @@ else {	# show form to create mailbox
 			<table>
 				<tr>
 					<th colspan="2"><?php echo $text_set_name; ?></th>
+				</tr>
 				<tr>
-					<td class="form_left"><?php echo $text_mailbox; ?>*:</td>
 					<td class="form_left">
 						<a href="#" class="tooltip"><?php echo $text_mailbox; ?>
 							<span><img class="callout" src="callout.png" /><?php echo $text_tooltip_mailbox1.": ".$max_mailboxname_length." ".$text_tooltip_chars."<br /><br />".$text_tooltip_mailbox2.": a-z, A-Z, 0-9 ".$text_tooltip_and." .-_+<br /><br />".$text_tooltip_mailbox3."<br /><br />".$text_tooltip_mailbox4."<br /><br />email-default@".$GLOBALS['domain']." --> <br /><br />email-maxmustermann@".$GLOBALS['domain']."  &<br />email-jondoe@".$GLOBALS['domain'];?></span>
